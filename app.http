@@ -1,0 +1,98 @@
+//getTodos
+//S-1
+GET http://localhost:3000/todos/?status=TO%20DO
+###
+
+//S-2
+GET http://localhost:3000/todos/?priority=HIGH
+###
+
+//S-3
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+###
+
+//S-4
+GET http://localhost:3000/todos/?search_q=Buy
+###
+
+//S-5
+GET http://localhost:3000/todos/?category=WORK&status=DONE
+###
+
+//S-6
+GET http://localhost:3000/todos/?category=HOME
+###
+
+//S-7
+GET http://localhost:3000/todos/?category=LEARNING&priority=HIGH
+###
+
+//getTodo/todoid GET API-2
+GET http://localhost:3000/todos/6
+###
+
+//agenda GET API-3
+GET http://localhost:3000/agenda/?date=2021-11-22
+###
+
+//createTodo API-4 POST
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 6,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO",
+  "category": "HOME",
+  "dueDate": "2021-12-22"
+}
+
+###
+
+//updateTodoAPI PUT API-5
+PUT http://localhost:3000/todos/6
+Content-Type: application/json
+
+{
+    "todo" : "finish tour"
+}
+###
+
+PUT http://localhost:3000/todos/6
+Content-Type: application/json
+
+{
+    "status" : "N PROGRESS"
+}
+###
+
+
+PUT http://localhost:3000/todos/6
+Content-Type: application/json
+
+{
+    "category" : "ORK"
+}
+###
+
+
+PUT http://localhost:3000/todos/6
+Content-Type: application/json
+
+{
+    "priority" : "IGH"
+}
+###
+
+
+PUT http://localhost:3000/todos/6
+Content-Type: application/json
+
+{
+    "dueDate" : "2021-21-22"
+}
+###
+
+//deleteTodo API - 6 delete
+DELETE http://localhost:3000/todos/6
