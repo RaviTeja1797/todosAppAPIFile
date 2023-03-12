@@ -123,7 +123,7 @@ const validateQuery = (request, response, next)=>{
         }
     }
 
-    if (countOfTruetyValues === countOfValidValues || countOfUndefinedVar === 3){
+    if (countOfTruetyValues === countOfValidValues || invalidVar.length === 0){
         next()
     }else{
         let invalidValuesString = invalidVar.join(" ")
